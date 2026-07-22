@@ -1,9 +1,13 @@
 @charset 'UTF-8';
 
+:root {
+    --primary: #c1171a;
+    --secondary: #fae8d7;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: aqua;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -17,9 +21,39 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-right: auto;
 }
 
+header {
+    position: relative;
+    height: 100%;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary);
+    z-index: -2; 
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/food.png');
+    opacity: 0.2; /* Control the opacity of the background image */
+    z-index: -1; /* Ensure the image is behind the content */
+}
+
+
 #logo {
     width: 220px;
-    outline: 3px solid red;
 }
 
 #logo img {
@@ -27,32 +61,113 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 nav {
+    padding: 1rem 0;
     display: flex;
     justify-content: space-between;
 }
 
-ul#menu {
-    outline: 3px solid green;
-    padding: 0;
+#menu {
+    list-style: none;
+    justify-content: center;
+    align-items: center;
 }
 
-ul#menu > li {
+#menu > li {
     display: inline-block;
     padding: 1rem;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+#menu a.nav-link {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--primary); 
+    width: 100px;
+    display: inline-block;
+    padding: 0 0.3rem 0 0;
+    text-align: center;
 }
 
 #banner {
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: 2px solid red;
+    flex-wrap: wrap;
+    gap: 10rem;
+    padding: 0 0 5rem;
 }
 
 #banner > div {
     flex: 1 1 100px;
-    outline: 3px solid violet;
 }
 
 #banner-image img {
     width: 100%;
+}
+
+#banner-description > h1 {
+    font-size: 6rem;
+    line-height: 7rem;
+    font-weight: 800;
+}
+
+#banner-description > h1::first-line {
+    color: var(--primary)
+}
+
+#banner-description p {
+    margin: 1rem 0 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+#banner-description a.btn {
+    margin: 1.4rem 0;
+}
+
+#banner-image img {
+    transition: transform .5s ease-in-out;
+    animation: fadeInAnimation ease 3s;
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+#banner-description a.btn {
+    margin: 1.4rem 0;
+}
+
+a.btn {
+    display: inline-block;
+    font-weight: 600;
+}
+
+.btn {
+    background-color: #c1171a;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: #7c0507;
+}
+
+.btn-rounded {
+    border-radius: 25px;
+}
+
+.btn-md {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.9rem;
+}
+
+.btn-sm {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8rem;
 }
