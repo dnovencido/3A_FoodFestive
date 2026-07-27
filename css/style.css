@@ -171,3 +171,72 @@ a.btn {
     padding: 0.8rem 1.5rem;
     font-size: 0.8rem;
 }
+
+#about-content {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 610px;
+    gap: 10px;
+}
+
+#primary-item {
+    background-color: var(--primary);
+    color: #FFFFFF;
+}
+
+#primary-item .thumbnail {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+#primary-item-heading {
+    padding: 0.6rem 1.5rem;
+}
+
+#primary-item-heading p {
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#about-content-sub .thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#about-content-sub {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 305px);
+}
+
+#about-content > div {
+    flex: 1 1 250px;
+}
+
+#about-description h1 {
+    font-size: 0.8 rem;
+    color: #c1171a;
+}
+
+#about-description h2 {
+    font-size: 1.8rem;
+}
+
+#about-description p {
+    font-size: 1.5rem;
+}
+
+div.section-heading {
+    margin: 1.5rem 0;
+}
+
+div.section-heading > h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
