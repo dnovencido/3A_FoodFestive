@@ -241,4 +241,43 @@ div.section-heading > h2 {
     color: var(--primary);
 }
 
+#primary-item-image img {
+    height: 100%
+}
 /* After checking kindly access the following link: https://forms.gle/xGvfHDjds5ULRvoc8 */
+
+
+#services {
+    background-color: #FFEBEE;
+    padding: 1rem 0 1rem;
+}
+
+#services-list-content {
+    display: flex;
+    gap: 75px;
+}
+
+.service-item {
+    flex: 1 1 200px;
+    padding: 20px;
+}
+
+#services-list-content img {
+    width: 120px;
+    margin: auto;
+    display: block;
+}
+
+.service-item-description {
+    text-align: center;
+}
+
+.service-item-description > h3 {
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+.service-item-description > p {
+    line-height: 1.3rem;
+    font-weight: 400;
+}
